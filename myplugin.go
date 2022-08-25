@@ -13,6 +13,9 @@ import (
 
 const ShellToUse = "bash"
 
+func init() {
+	processors.RegisterPlugin("myplugin", New)
+}
 
 type Myplugin struct {
 }
