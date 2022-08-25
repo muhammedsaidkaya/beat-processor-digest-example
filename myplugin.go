@@ -53,3 +53,5 @@ func Shellout(command string) (error, string, string) {
     err := cmd.Run()
     return err, stdout.String(), stderr.String()
 }
+
+func main() {}
