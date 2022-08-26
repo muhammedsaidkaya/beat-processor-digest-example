@@ -1,0 +1,8 @@
+version: "2.1"
+services:
+  filebeat-with-myplugin:
+    build: .
+    volumes:
+      - "./config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro"
+      - "/var/run/docker.sock/:/var/run/docker.sock"
+      - "./data:/var/lib/docker/containers:ro"

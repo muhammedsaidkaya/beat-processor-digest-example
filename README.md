@@ -1,7 +1,10 @@
 
-# Filebeat Image Digest Plugin
+# Beat Processor Digest 
 
 ```
-go build -buildmode=plugin
-/usr/bin/filebeat --plugin beats.so
+docker-compose up
 ```
+
+## Resources
+* https://github.com/hasnat/beats-processor-replace
+* https://github.com/andrewkroh/beats-processor-fingerprint

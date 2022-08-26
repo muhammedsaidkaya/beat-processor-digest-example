@@ -1,0 +1,16 @@
+
+
+filebeat.inputs:
+  - type: log
+    paths:
+      - '/var/lib/docker/containers/*.log'
+    fields_under_root: true
+processors:
+  - myplugin: ~
+
+output.console:
+  codec.format:
+    string: '%{[message]}'
+
+logging.json: true
+logging.metrics.enabled: false

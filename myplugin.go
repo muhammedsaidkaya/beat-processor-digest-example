@@ -13,9 +13,6 @@ import (
 
 const ShellToUse = "bash"
 
-func init() {
-	processors.RegisterPlugin("myplugin", New)
-}
 
 type Myplugin struct {
 }
@@ -53,5 +50,3 @@ func Shellout(command string) (error, string, string) {
     err := cmd.Run()
     return err, stdout.String(), stderr.String()
 }
-
-func main() {}
